@@ -59,7 +59,6 @@ sudo pacman -S --needed --noconfirm \
     gnome-control-center \
     gnome-tweaks \
     dconf-editor \
-    gnome-extensions \
     git \
     wget \
     curl \
@@ -82,7 +81,7 @@ if [ ! -d "$THEMES_DIR/Orchis" ]; then
     rm -rf Orchis-theme
     git clone https://github.com/vinceliuice/Orchis-theme.git
     cd Orchis-theme
-    ./install.sh -d "$THEMES_DIR" -t light -c compact
+    ./install.sh -d "$THEMES_DIR" -c compact  # Remove '-t light' se não for necessário
     cd - > /dev/null
     print_success "Tema Orchis instalado"
 else
